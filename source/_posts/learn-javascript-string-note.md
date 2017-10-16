@@ -23,7 +23,6 @@ tags:
 ```
 var s = 'hello world';
 ```
-
 - 但在es5中支持多行，以‘\’反斜杠链接；eg:
 ```
 var S = 'hello\
