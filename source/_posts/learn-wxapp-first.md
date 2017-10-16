@@ -83,5 +83,5 @@ WXSS(WeiXin Style Sheet)用于描述页面的样式。
 组件(Component)是视图的基本组成单元。
 
 # demo
-> [项目地址]()
+> [项目地址](https://github.com/dazjean/wx_webapp_demo)
          
