@@ -90,18 +90,25 @@ exclude_generator:
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repository: git@github.com:dazjean/dazjean.github.io.git
-  branch: master
+#deploy:
+#  type: git
+#  repository: git@github.com:dazjean/dazjean.github.io.git
+#  branch: master
 
 #deploy:
- # type: rsync
- # host: 120.24.181.238
- # user: root
- # root: /usr/local/nginx/litten.me/
-  #port: 22
+#  type: rsync
+#  host: qxu1606450118.my3w.com
+#  user: qxu1606450118
+#  root: /htdocs
+#  port: 21
 
+deploy:
+  type: ftpsync
+  host: qxu1606450118.my3w.com
+  user: qxu1606450118
+  pass: zhangjia2woaini
+  remote: /htdocs
+  port: 21
 sitemap:
     path: sitemap.xml
 baidusitemap:
