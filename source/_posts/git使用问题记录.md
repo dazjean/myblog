@@ -9,7 +9,9 @@ tags:
 $ git reset --hard 【merge前的版本号】
 ``` 
 ### 2. 如果当前分支上git status 有文件改动列表 执行git checkout .无效
+```
 <!-- more -->
+
 ```
 $ git status
 On branch master
