@@ -12,7 +12,7 @@ keywords: "前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极�
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: //dazjean.github.io
+url: //zhangdajia.com
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -215,10 +215,10 @@ disqus: false
 
 #5、Gitment
 gitment_owner: dazjean      #你的 GitHub ID
-gitment_repo: dazjean.github.io          #存储评论的 repo
+gitment_repo: myblog      #存储评论的 repo gitment_repo
 gitment_oauth:
-  client_id: d4d784a093acc9f57d46          #client ID
-  client_secret: 7adfb69285b6d880d8435eb672bc938c45263b22       #client secret
+  client_id: 57fdde34bbd335645a42       #client ID d4d784a093acc9f57d46
+  client_secret: abd442e66941802eb178388e844ec0f48c63d73c        #client secret 7adfb69285b6d880d8435eb672bc938c45263b22
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
