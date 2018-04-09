@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>css实现图片自动缩放</title>
+  
+  <!--  Styles  -->
+  <style type = 'text/css'>
+    .bunner{
+      width:265px;
+      height:200px;
+      background-color:#3590ea;
+      overflow: hidden;
+    }
+    .css-expression-img{
+      max-width:265px;
+      width:expression(this.width > 265 ? "265px" : this.width);
+      max-height:200px;
+      height:expression(this.width > 200 ? "200px" : this.height);
+    }
+    .css-auto-max-img{
+      width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    }
+    .imgCover{
+      width:100%;
+      height:0;
+      padding-bottom: 100%;
+      overflow:hidden;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      background-size:cover;
+    }
+  </style>
+</head>
+<body>
+  <h3>css-width100%</h3>
+  <div class='bunner'>
+    <img style = 'width:100%;' src = 'http://pic1.58cdn.com.cn/mobile/big/n_v252a722b32a5a4249adcbef14632ebe73.jpg' />
+  </div> 
+  <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+  <h3>css-height100%</h3>
+  <div class='bunner'>
+    <img style = 'height:100%;' src = 'http://pic1.58cdn.com.cn/mobile/big/n_v252a722b32a5a4249adcbef14632ebe73.jpg' />
+  </div> 
+  
+  <h3>css-expression计算</h3>
+  <div class='bunner'>
+    <img class ='css-expression-img' src = 'http://pic1.58cdn.com.cn/mobile/big/n_v252a722b32a5a4249adcbef14632ebe73.jpg' />
+  </div> 
+  <h3>高宽auto，设置max-width,max-height</h3>
+  <div class='bunner'>
+    <img class ='css-auto-max-img' src = 'http://pic1.58cdn.com.cn/mobile/big/n_v252a722b32a5a4249adcbef14632ebe73.jpg' />
+  </div> 
+  <p>后面三种方案效果是一样的，在设计稿中，父容器高宽固定，图片展示等比例缩放占满整个容器时效果最好，设计师PM也倾向于这种铺满容器的方案，在动手之前请说服PM 铺满容器时肯定会对图片进行相应的裁剪！</p>
+  
+  <h3>object-fit cover</h3>
+  <div class='bunner'>
+    <img style ='object-fit: cover;height:100%;width:100%;' src = 'http://pic1.58cdn.com.cn/mobile/big/n_v252a722b32a5a4249adcbef14632ebe73.jpg' />
+    <p>容器定宽高，图片高宽100% 然后设置object-fit,这个属性和background-size的裁剪方式一样，只是一个是针对背景，一个事对img videos等媒体标签<a href = 'https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit'>https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit</a></p>
+  </div> 
+  <br/><br/><br/><br/><br/><br/><br/>
+  <h3>padding百分比设置div背景</h3>
+  <div class='bunner'>
+    <div class='imgCover' style='background-image:url(http://pic1.58cdn.com.cn/mobile/big/n_v252a722b32a5a4249adcbef14632ebe73.jpg)'>
+  </div> 
+  <!-- Scripts -->
+</body>
+</html>
