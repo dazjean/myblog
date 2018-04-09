@@ -1,5 +1,5 @@
 ---
-title: how-to-autoscaling-img-bycss
+title: 父元素定宽高，如何使用css自动缩放图片
 date: 2018-04-09 18:57:26
 tags: zhang dajia
   -css
