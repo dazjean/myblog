@@ -2,7 +2,7 @@
 title: 使用Prettier eslint pre-commit进行js代码自动检测,格式化统一风格
 date: 2018-04-10 21:36:51
 tags:
-    -js
+    - js
     - eslint
     - pre-commit
 ---

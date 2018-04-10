@@ -2,7 +2,7 @@
 title: 微信小程序学习笔记
 date: 2017-10-16 12:54:41
 tags:
-	-小程序
+	- 小程序
 ---
 # 目录结构
  > 一个小程序的目录结构，包含app.js,app.json,app.wxss和pages,utils等文件

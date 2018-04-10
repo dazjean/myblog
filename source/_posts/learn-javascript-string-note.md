@@ -3,7 +3,7 @@ title: javascript权威指南读书笔记—字符串
 date: 2017-10-16 11:34:51
 author: 张佳佳
 tags:
-	-JavaScript
+	- js
 ---
 # 字符串
 > javascript采用utf-16编码unicode字符集，js字符串则由一组无序号的16位值组成的序列。
