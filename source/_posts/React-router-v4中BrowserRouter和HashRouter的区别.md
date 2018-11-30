@@ -232,3 +232,10 @@ eg:
 当然，对于BorwserRouter这也是不会支持历史记录功能的。
 
 ### [附上代码地址](https://github.com/dazjean/hmbird-ssr/tree/master/src/page)
+
+*安利两篇讲解ReactRouter的译文
+
+- [
+React Router 中文文档（一）](https://segmentfault.com/a/1190000014294604)
+- [
+React Router 中文文档（二）](https://segmentfault.com/a/1190000014342764)
