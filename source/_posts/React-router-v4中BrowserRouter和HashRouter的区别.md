@@ -6,9 +6,10 @@ tags:
    - React-Router
    - React
 ---
-# <HashRouter>
 
-它使用URL的哈希部分（即`window.location.hash`）来保持页面的UI与URL同步。
+
+# HashRouter
+> 它使用URL的哈希部分（即`window.location.hash`）来保持页面的UI与URL同步。
 
 **重要说明：**哈希历史记录不支持`location.key`或`location.state`。在以前的版本中，我们试图填充行为，但是有一些我们无法解决的边缘情况。任何需要此行为的代码或插件都不起作用。由于此技术仅用于支持旧版浏览器，因此我们建议您将服务器配置为使用“<BrowserHistory>”。
 <!-- more -->
@@ -52,7 +53,7 @@ const getConfirmation =（message，callback）=> {
 
 默认为“斜线”`。
 
-# <BrowserRouter>
+# BrowserRouter
 > 使用HTML5历史API（ pushState，replaceState和popstate事件），让页面的UI同步与URL
 
 ```
