@@ -38,7 +38,9 @@ tags:
 在react@15版本ssr方案中，renderToStaticMarkup因为不带data-reactid标识，实际上在客户端渲染的时候，react是没法diff组件虚拟dom;react是会重新通过客户端渲染的dom覆盖掉服务端吐出来的html,会闪一下。
  
  
-但在react@16版本后的ssr中，官方对ssr做了优化，renderToString输出来也是没有data-reactid属性（向下兼容，之前ssr项目在15上能运行，使用react@16后可以直接使用），16版本推出新的ssr方法。
+
+### 16版本推出新的ssr方法。
+> react@16+向下兼容，之前ssr项目在15上能运行，使用react@16后可以直接使用.
  
 - renderToNodeStream 对标 renderToString   
 - renderToStaticNodeStream 对标 renderToStaticMarkup  ，此方法无论服务端有没有渲染，客户端都会重新渲染,在存静态页面时使用可得到好的渲染速度
