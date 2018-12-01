@@ -136,7 +136,7 @@ this.props.history.push({
 // state 传递参数
 this.props.history.push({
     pathname: '/about',
-    query: {
+    state: {
         msg: '来自首页的问候！by state'
     }
 });
