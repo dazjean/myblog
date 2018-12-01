@@ -51,7 +51,7 @@ const getConfirmation =（message，callback）=> {
 - "noslash" - Creates hashes like # and #sunshine/lollipops
 - "hashbang" - Creates [ajax crawlable](https://developers.google.com/webmasters/ajax-crawling/docs/learn-more) (deprecated by Google) hashes like #!/ and #!/sunshine/lollipops
 
-默认为“斜线”`。
+默认为“slash”`。
 
 # BrowserRouter
 > 使用HTML5历史API（ pushState，replaceState和popstate事件），让页面的UI同步与URL
@@ -71,14 +71,15 @@ import  { BrowserRouter }  form 'react-router-dom';
 以上是直接在官方api中可以直接查看到的说明，直接拿了过来，也可以去查看一些更好的博客介绍，比如[初探 React Router 4.0](https://www.jianshu.com/p/e3adc9b5f75c/);那么接下来我们来总结一下在使用过程中这两者到底有什么不同。
 # 区别
 ## url上表现不一致
- - BrowserRouter使用HTML5 history API，保证UI界面和URL保存同步
+- BrowserRouter使用HTML5 history API，保证UI界面和URL保存同步
 ```
 1、比如入口文件是：http://localhost:9991/page/with-react-browserRouter/with-react-browserRouter.html
 2、访问about路由url地址是：http://localhost:9991/hmbird_router/with-react-browserRouter/about  
 3、basename设置为：basename="/hmbird_router/with-react-browserRouter"
 ```
-  - HashRouter使用URL（即window.location.hash）的哈希部分来保持UI与URL同步的。哈希历史记录不支持location.key和location.state  [详情查看history](https://github.com/ReactTraining/history) 用来支持旧版浏览器，官方不建议使用
-  ```
+
+- HashRouter使用URL（即window.location.hash）的哈希部分来保持UI与URL同步的。哈希历史记录不支持location.key和location.state  [详情查看history](https://github.com/ReactTraining/history) 用来支持旧版浏览器，官方不建议使用
+```
 1、比如入口文件是：http://localhost:9991/page/with-react-hashRouter/with-react-hashRouter.html
 2、访问about路由url地址是：http://localhost:9991/page/with-react-hashRouter/with-react-hashRouter.html#/hmbird_router/with-react-hashRouter/about  
 3、basename设置为：basename="hmbird_router/with-react-hashRouter"
@@ -106,8 +107,8 @@ import  { BrowserRouter }  form 'react-router-dom';
 console.log(this.props.location)
 //{pathname: "/about", search: "?msg='我是url参数'", hash: "", state: undefined}
 
-
 ```
+
 优缺点：参数比较灵活，参数直接在url中暴露，刷新路由页面时传递参数依然可以正常访问。缺点是还需要js通过search中解析类似getParameter(msg)方式获取真实值
 ### 路由表中通过:id方式
 ```jsx
@@ -146,6 +147,7 @@ console.log(this.props.location.query.msg)//来自首页的问候！by query
 // state 接受参数
 console.log(this.props.location.state.msg)//来自首页的问候！by state
 ```
+
 优缺点：参数灵活，不用给Route额外的配置，参数是加密的，不暴露在url上。
 
 >以上测试结果方式对HashRouter和BowserRouter方式都有效
@@ -178,6 +180,7 @@ class About extends Component {
     }
 }
 ```
+
 通过js执行跳转
 ```js
 this.props.history.push({
@@ -203,6 +206,7 @@ this.props.history.push({
 //刷新页面或者后退再前进
 {"pathname":"/about","state":{"msg":"来自首页的问候！by state"},"search":"","hash":"","key":"1m6gz4"}
 ```
+
 到这儿，应该知道为啥说location不支持key和state了吧，当我们通过state传递参数的时候，因为hashRouter没有使用html5中history的api，无法从历史记录中获取到key和state值，所以当刷新路由后state值会丢失导致页面显示异常。
 
 ## 总结，实现路由页面页面刷新数据不丢失的方案
@@ -229,6 +233,7 @@ eg:
  //取值
  this.props.location.custom.msg
 ````
+
 当然，对于BorwserRouter这也是不会支持历史记录功能的。
 
 ### [附上代码地址](https://github.com/dazjean/hmbird-ssr/tree/master/src/page)
