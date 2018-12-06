@@ -124,7 +124,7 @@ console.log(this.props.match.params.msg)
 ```
 优缺点：参数比较灵活，参数直接在url中暴露,刷新路由页面时传递参数依然可以正常访问。但每增加一个参数需要在Route中注册一个，而且顺序需要一致。
 
-### 其他query和state
+### 其他query(自定义属性)和state
 > 这两种传值方式都是在js通过逻辑判断去触发的。
 ```js
 // query 传递参数
@@ -219,7 +219,8 @@ this.props.history.push({
 
 
 -------------
-** 在测试过程中还发现了 通过js传递参数时，除了query和state 还可以自定义属性；
+** 在资料中自定义参数大多使用query字段，通过js传递参数时，query属于自定义属性，可以自定义其他属性替代；[感谢网友`印度大使
+`指正](http://react-china.org/t/react-router-v4-browserrouter-hashrouter/27795/3?u=dazjean)
 
 eg:
 ```
