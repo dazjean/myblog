@@ -9,7 +9,7 @@ tags:
 > 在统计一个PC端站点的浏览器分布情况时，发现大量IE7用户且指标排名第二，吓死个人。而从百度研究院数据来看，IE7用户占比非常低。故此查询了相关资料，360浏览器默认打开为兼容模式，随便找台电脑查看了一下内核信息如下
 `"Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; rv:11.0) like Gecko" 
 `  官方提供了一个类似X-UA-Compatible的属性renderer。故此延伸出此文。
-
+<!-- more -->
 #### http-equiv
 > http-equiv是一个枚举属性，它定义了能改变服务器和用户浏览器引擎行为的编译方式，值使用content来定义。
 
